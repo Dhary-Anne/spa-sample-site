@@ -9,7 +9,7 @@ function makeContactPage(){
     address.textContent = '📍 123 Serenity Street, Miami, FL, USA';
 
     const spaLocation = document.createElement('img');
-    spaLocation.src = 'images-vids/map.png';
+    spaLocation.src = '/images-vids/map.png';
     spaLocation.alt = 'Oasis Spa location';
 
     contact.appendChild(phoneNumber);
