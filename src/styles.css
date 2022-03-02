@@ -1,0 +1,270 @@
+:root{
+    --font-color: #eee;
+    --dark-font: #aaa;
+    --background-color: rgba(0, 0, 0, 0,6);
+    --hover-color: rgba(99, 99, 99, 0.4);
+    --dark-backgound: rgba(0, 0, 0, 0.9);
+    --border-color: #222;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 63%;
+    line-height: 1.6;
+}
+
+body{
+    font-family: 'Romanesco', cursive;
+    font-size: 1.7rem;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    background-image: url('../dist/images-vids/candles-towels.jpg');
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+header{
+    font-size: 2.5rem;
+}
+h1,
+h2,
+h3{
+    line-height: 1.2;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+button{
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+/* Content */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.spa-name{
+    margin-bottom: 1rem;
+    font-family: 'Romanesco', cursive;
+    font-size: 12rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+   /* background-color: var(--background-color);*/
+}
+
+.button-nav{
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: var(--background-color);
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+}
+
+.button-nav:hover{
+    transform: translateY(-10%);
+    border-color: white;
+}
+
+.button-nav.active{
+    border-bottom: 2px solid var(--font-color);
+}
+
+
+/* Main */
+.main{
+    max-width: 80vw;
+    padding: 4rem;
+    margin: 6rem 0;
+    font-size: 2rem;
+    background-color: var(--dark-backgound); 
+    border: 1px solid var(--border-color);
+    margin: auto;
+}
+
+/* Home Page */
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center; /* space aroung */
+    height: 710px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.home p{
+    padding: 2rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.home img{
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    opacity: .85;
+}
+
+/* Services Page */
+
+.service-menu{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;
+  width: 70vw;
+  overflow: auto;
+}
+
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+    padding: 4rem;
+    cursor: pointer;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+.service-item:hover{
+    background-color: var(--hover-color);
+}
+.service-item img{
+    width: 70%;
+    height: 50%;
+}
+
+.service-item h2{
+    padding: 2.3rem;
+}
+.service-item p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* Contact Page */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+    margin: auto;
+    text-align: left;
+}
+
+.contact p {
+    width: 100%;
+    padding: 1rem;
+}
+
+.contact img{
+    max-height: 420px;
+    padding: 1.5rem;
+    opacity: .9;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+.fa-github{
+    font-size: 2rem;
+}
+
+.fa-github:hover{
+    color: var(--dark-font);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+
+@media (max-width: 700px) {
+    .home,
+    .contact{
+        height: 100%;
+        width: 100%
+    }
+    .grid-layout{
+        grid-template-columns: 1fr;
+    }
+    .grid-layout img{
+        width: 50%;
+    }
+    .service-menu{
+        max-width: 50vw;
+    }
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 55.5%;
+    }
+    .home img{
+        width: 80%;
+    }
+    .service-menu{
+        max-width: 35vw;
+    }
+}
