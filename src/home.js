@@ -3,7 +3,7 @@ function createHomePage(){
     home.classList.add('home');
 
     const lobbyImg = document.createElement('img');
-    lobbyImg.src = "../dist/images-vids/spa-lobby.png";
+    lobbyImg.src = "images-vids/spa-lobby.png";
     lobbyImg.alt = "Lobby";
 
     home.appendChild(makeParagraph(''));
