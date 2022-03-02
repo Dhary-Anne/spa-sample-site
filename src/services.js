@@ -53,7 +53,7 @@ function createServiceItem(name, description){
     serviceDescription.textContent = description;
 
     const serviceImg = document.createElement('img');
-    serviceImg.src = `/images-vids/${name.replaceAll(' ', '-').toLowerCase()}.png`;
+    serviceImg.src = `../dist/images-vids/${name.replaceAll(' ', '-').toLowerCase()}.jpg`;
     serviceImg.alt = `${name}`;
 
     serviceItem.appendChild(serviceImg);
